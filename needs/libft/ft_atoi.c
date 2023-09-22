@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 13:16:55 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/06/16 13:16:58 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:28:01 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ long long int	ft_atoi(const char *str)
 	}
 	while (str[i] >= 48 && str[i] <= 57)
 	{
+		if (!ft_isdigit(str[i]))
+			return (0);
 		res = (res * 10) + (str[i] - '0');
 		i++;
 	}

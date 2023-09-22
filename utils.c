@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 15:52:20 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/05 12:57:29 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:21:49 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	inicialitar_stacks(t_stack *a, t_stack *b)
 void	ft_error(int type, int *all_int)
 {
 	if (type == 1)
-		write(1, "ERROR\n", 6);
+		write(2, "Error\n", 6);
 	free(all_int);
 	exit(type);
 }

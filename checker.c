@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:48:46 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/17 12:09:13 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:32:35 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,14 @@ int	check_args(char *s)
 	int	i;
 
 	i = 0;
+	if (!s[i])
+		return (0);
 	while (s[i])
 	{
 		if (ft_isdigit(s[i]) == 0)
 		{
-			if ((s[i] == '-' || s[i] == '+') && ft_isdigit(s[i + 1]) == 1)
+			if ((s[i] == '-' || s[i] == '+') && ft_isdigit(s[i + 1]) == 1 \
+			&& !ft_isdigit(s[i - 1]))
 				i++;
 			else
 				return (0);

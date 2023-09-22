@@ -36,15 +36,15 @@ ${NAME}: ${OBJS}
 -include ${DEPS}
 
 clean:
-	@${MAKE} clean -C needs/libft
-	@${MAKE} clean -C needs/printf
-	rm -rf ${OBJ_DIR}
+	@${MAKE} -s clean -C needs/libft
+	@${MAKE} -s clean -C needs/printf
+	@rm -rf ${OBJ_DIR}
 	@echo "$(RED)\nDestruction successful\n$(NC)"
 
 fclean: clean
-	@${MAKE} fclean -C needs/libft
-	@${MAKE} fclean -C needs/printf
-	rm -rf ${NAME}
+	@${MAKE} -s fclean -C needs/libft
+	@${MAKE} -s fclean -C needs/printf
+	@rm -rf ${NAME}
 
 re: fclean all
 

@@ -35,21 +35,3 @@ int	main(int argc, char **argv)
 	ft_free(&b);
 	return (0);
 }
-
-//DELETE
-void	mostra(t_stack *stack)
-{
-	t_stack	tmp;
-
-	tmp = *stack;
-	// printf("Stack size: %d\n\n", stack->size);
-	if (stack->size == 0)
-		return ;
-	while (tmp.first)
-	{
-		// printf("<<<<< %d NODO >>>>>\n", tmp.first->position);
-		printf("%d\n", tmp.first->num);
-		// printf("Num:%d\nPosition: %d\nIndex: %d\n\n", tmp.first->num, tmp.first->position, tmp.first->index);
-		tmp.first = tmp.first->next;
-	}
-}

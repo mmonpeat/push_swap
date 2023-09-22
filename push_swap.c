@@ -6,7 +6,7 @@
 /*   By: mmonpeat <mmonpeat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 15:23:46 by mmonpeat          #+#    #+#             */
-/*   Updated: 2023/07/17 12:21:00 by mmonpeat         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:40:21 by mmonpeat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	organize_stacks(t_stack *a, t_stack *b, int *all_int, int argc)
 {
 	create_nodes(a, all_int, argc);
+	if (probe_order(a))
+		return (1);
 	if (argc < 4 && !probe_order(a))
 		ft_swap(a, 'a');
 	else if (argc == 4)
@@ -27,11 +29,6 @@ int	organize_stacks(t_stack *a, t_stack *b, int *all_int, int argc)
 		sort_big(a, b, a->size, 4);
 	else
 		sort_big(a, b, a->size, 9);
-	//mostra per pantalla el resultat
-	printf("-------------STACK A------------\n");
-	mostra(a);
-	printf("-------------STACK B------------\n");
-	mostra(b);
 	return (1);
 }
 
